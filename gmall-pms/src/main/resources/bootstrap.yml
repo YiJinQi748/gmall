@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: pms-server
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: 44f8858a-51be-4ea4-b19a-e0d884014dc0
+        group: dev
+        file-extension: yaml
