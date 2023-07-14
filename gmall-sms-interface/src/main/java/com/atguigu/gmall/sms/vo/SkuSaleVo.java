@@ -1,14 +1,14 @@
-package com.atguigu.gmall.pms.vo;
+package com.atguigu.gmall.sms.vo;
 
-import com.atguigu.gmall.pms.entity.SkuAttrValueEntity;
-import com.atguigu.gmall.pms.entity.SkuEntity;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 @Data
-public class SkuVo extends SkuEntity {
+public class SkuSaleVo {
+
+    private Long skuId;
 
     //积分优惠
 
@@ -36,10 +36,4 @@ public class SkuVo extends SkuEntity {
     private BigDecimal reducePrice;
 
     private Integer FULLaddOther;
-
-    //sku图片列表
-    private List<String> images;
-
-    //销售属性
-    private List<SkuAttrValueEntity> saleAttrs;
 }
