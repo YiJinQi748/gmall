@@ -21,6 +21,19 @@ spring:
       uris: http://192.168.234.128:9200
   thymeleaf:
     cache: false
+  rabbitmq:
+    port: 5672
+    host: 192.168.234.128
+    virtual-host: /gmall
+    username: gmallMQ
+    password: 123456
+    listener:
+      simple:
+        acknowledge-mode: manual
+        #能者多劳 预分配1个消息
+        prefetch: 1
+        #多线程消费
+        concurrency: 6
 feign:
   sentinel:
     enabled: true

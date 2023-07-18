@@ -11,6 +11,9 @@ import java.util.List;
 
 public interface GmallPmsApi {
 
+    @GetMapping("pms/spu/{id}")
+    ResponseVo<SpuEntity> querySpuById(@PathVariable("id") Long id);
+
     @PostMapping("pms/spu/json")
     ResponseVo<List<SpuEntity>> querySpuByPageJson(@RequestBody PageParamVo paramVo);
 
