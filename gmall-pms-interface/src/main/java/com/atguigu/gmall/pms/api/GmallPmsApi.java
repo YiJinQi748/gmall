@@ -26,6 +26,12 @@ public interface GmallPmsApi {
     @GetMapping("pms/category/{id}")
     ResponseVo<CategoryEntity> queryCategoryById(@PathVariable("id") Long id);
 
+    @GetMapping("pms/category/parent/{parentId}")
+    ResponseVo<List<CategoryEntity>> queryCategoryByPid(@PathVariable("parentId") Long pid);
+
+    @GetMapping("pms/category/lv23/{pid}")
+    ResponseVo<List<CategoryEntity>> queryLV23CategoriesByPid(@PathVariable("pid")Long pid);
+
     @GetMapping("pms/skuattrvalue/search/{cid}/{skuId}")
     ResponseVo<List<SkuAttrValueEntity>> querySearchSkuAttrValueByCidAndSkuId(
             @PathVariable("cid")Long cid,
